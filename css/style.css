@@ -12,9 +12,267 @@ font-family: 'Open Sans', sans-serif;*/
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 100px;
 }
 
 .container {
 	max-width: 1088px;
 	margin: 0 auto;
+}
+.section-title {
+	font-size: 35px;
+
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'Nunito Sans', sans-serif;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-title::before,
+.section-title::after {
+	content: "";
+	width: 50px;
+	height: 3px;
+	background: var(--col-main);
+	margin: 10px;
+}
+.btn {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: var(--col-main);
+	color: #fff;
+	font-style: 14px;
+	padding: 10px 30px;
+	border-radius: 20px;
+	box-shadow: 0 2px 3px rgba(255, 0, 0, 0.3);
+	display: inline-block;
+}
+
+.hero {
+	height: 100vh;
+	background: url(/images/orange-bmw-m-series-235317.jpg);
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 600px;
+	/*height:max(600px 100vh);*/
+}
+.hero::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+}
+.hero__arrow {
+	width: 55px;
+	height: 55px;
+	background: var(--col-main);
+	background-image: url(/images/icon-arrow-down.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -27.5px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	box-shadow: 0 2px 3px rgba(255, 0, 0, 0, 0.3);
+	z-index: 1;
+}
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	background: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header__container {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 47px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 35px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-flex;
+	align-items: center;
+}
+.logo__icon {
+}
+
+.logo span {
+	color: var(--col-main);
+}
+
+.menu {
+	height: 100%;
+}
+.menu__list {
+	height: 100%;
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.menu__list-el {
+}
+.menu__list-link {
+	height: 100%;
+	display: flex;
+	color: #fff;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.menu__list-link:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.banner {
+	display: flex;
+	flex-grow: 1;
+
+	margin-top: 90px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 1;
+}
+
+.banner__title {
+	font-size: 90px;
+	line-height: 1;
+	font-family: 'Nunito Sans', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.banner__text {
+	max-width: 920px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin: 0 40px;
+}
+.banner__buttons {
+	display: flex;
+	justify-content: center;
+}
+.banner__btn {
+	width: 218px;
+	height: 68px;
+	background: var(--col-main);
+	color: white;
+	border-radius: 40px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Nunito Sans', sans-serif;
+	text-decoration: none;
+	margin: 0 12px;
+	transition: 0, 3s;
+}
+.banner__btn:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 0 5px rgba(255, 0, 0, 0, 0.5);
+}
+.banner__btn--main {
+}
+.banner__btn--second {
+	background: white;
+	color: var(--col-main);
+}
+
+.section-blog {
+	padding: 100px 0;
+}
+
+.blog-list {
+	display: flex;
+}
+.blog-card {
+	color: #6a6a6a;
+}
+
+.blog-card + .blog-card {
+	margin-left: 20px;
+}
+.blog-card__img {
+	max-width: 100%;
+}
+.blog-card__title {
+	font-size: 19px;
+	text-transform: uppercase;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+}
+.blog-card__text {
+	font-style: 14px;
+	font-weight: lighter;
+	opacity: 0.8;
+}
+.blog-card__btn {
+}
+
+.section-service {
+	padding: 100px 0;
+	background-color: #222222;
+}
+.section-service-title {
+	color: white;
+}
+
+.service-list {
+	display: flex;
+}
+.service-card {
+	padding: 0 15px;
+	text-align: center;
+}
+
+.service-card + .service-card {
+	margin-left: 20px;
+}
+.service-card__img {
+	max-width: 100%;
+	width: 170px;
+	height: 170px;
+}
+.service-card__title {
+	font-style: 19px;
+	text-transform: uppercase;
+	font-family: 'Nunito Sans', sans-serif;
+	color: white;
+}
+.service-card__text {
+	font-style: 14px;
+	font-weight: 300;
+	color: #6a6a6a;
+}
+.service-card__btn {
 }
