@@ -1,4 +1,3 @@
 # car_sharing
-Przykładowy layout
-
+First HTML CSS project 
 
